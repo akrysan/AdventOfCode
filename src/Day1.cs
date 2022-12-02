@@ -2,9 +2,9 @@
 
 namespace AdventOfCode
 {
-    public class Day1
+    class Day1
     {
-        public static int Solve()
+        public int Solve()
         {
             var input = System.IO.File.ReadAllText(@"input\day1.txt");
 
