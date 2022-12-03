@@ -6,7 +6,7 @@ namespace AdventOfCode
     {
         public int Solve()
         {
-            var input = System.IO.File.ReadAllText(@"input\day2.txt");
+            var input = System.IO.File.ReadAllText(@"..\..\..\input\day2.txt");
 
             return RoundB(input);
         }

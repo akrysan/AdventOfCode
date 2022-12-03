@@ -6,7 +6,7 @@ namespace AdventOfCode
     {
         public int Solve()
         {
-            var input = System.IO.File.ReadAllText(@"input\day1.txt");
+            var input = System.IO.File.ReadAllText(@"..\..\..\input\day1.txt");
 
             var maxCalories = input
                 .Split("\r\n\r\n")
