@@ -14,13 +14,9 @@ namespace AdventOfCode
         private int RoundA(string input) {
             var result = input
                 .Split("\r\n")
-                .Select(y => {
-                    var game = y.Split(" ");
-
-                    var score = CalculateScore(game);
-
-                    return score;
-                }).Sum();
+                .Select(x => x.Split(" "))
+                .Select(Score)
+                .Sum();
 
             return result;
         }
@@ -29,20 +25,15 @@ namespace AdventOfCode
         {
             var result = input
                 .Split("\r\n")
-                .Select(y => {
-                    var game = y.Split(" ");
-
-                    game = MapStrategy(game);
-
-                    var score = CalculateScore(game);
-
-                    return score;
-                }).Sum();
+                .Select(x => x.Split(" "))
+                .Select(MapStrategy)
+                .Select(Score)
+                .Sum();
 
             return result;
         }
 
-        private int CalculateScore(string[] game) {
+        private int Score(string[] game) {
             var score = 0;
             if (game[0] == "A" && game[1] == "X")
             {
