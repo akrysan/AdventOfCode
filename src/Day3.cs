@@ -16,21 +16,19 @@ namespace AdventOfCode
         {
             var result = input
                 .Split("\r\n")
-                .Select(y =>
+                .Select(x =>
                 {
-                    var compartments = (y.Substring(0, y.Length / 2), y.Substring(y.Length / 2));
+                    var y = (x.Substring(0, x.Length / 2), x.Substring(x.Length / 2));
 
-                    char type = 'a';
-                    foreach (var z in compartments.Item1)
+                    foreach (var z in y.Item1)
                     {
-                        if (compartments.Item2.Contains(z))
+                        if (y.Item2.Contains(z))
                         {
-                            type = z;
-                            break;
+                            return z;
                         }
                     }
 
-                    return type;
+                    return Char.MinValue;
                 })
                 .Select(score)
                 .Sum();
@@ -41,26 +39,23 @@ namespace AdventOfCode
         private int RoundB(string input)
         {
             var result = input
-                .Split("\r\n");
-
-            var sum = 0;
-
-            for (int i = 0; i < result.Length / 3; i++)
-            {
-                char type = 'a';
-                foreach (var z in result[3 * i])
-                {
-                    if (result[3 * i + 1].Contains(z) && result[3 * i + 2].Contains(z))
+                .Split("\r\n")
+                .Chunk(3)
+                .Select(x => {
+                    foreach (var y in x[0])
                     {
-                        type = z;
-                        break;
+                        if (x[1].Contains(y) && x[2].Contains(y))
+                        {
+                            return y;
+                        }
                     }
-                }
 
-                sum += score(type);
-            }
+                    return Char.MinValue;
+                })
+                .Select(score)
+                .Sum();
 
-            return sum;
+            return result;
         }
 
         private int score(char c)
