@@ -30,7 +30,7 @@ namespace AdventOfCode
 
                     return Char.MinValue;
                 })
-                .Select(score)
+                .Select(Score)
                 .Sum();
 
             return result;
@@ -52,13 +52,13 @@ namespace AdventOfCode
 
                     return Char.MinValue;
                 })
-                .Select(score)
+                .Select(Score)
                 .Sum();
 
             return result;
         }
 
-        private int score(char c)
+        private int Score(char c)
         {
             if ('a' <= c && c <= 'z')
             {
