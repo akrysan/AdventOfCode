@@ -1,17 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel.Design;
-using System.Data;
-using System.IO;
-using System.IO.MemoryMappedFiles;
-using System.Linq;
-using System.Numerics;
-using System.Runtime;
-using System.Security;
-using System.Security.Cryptography.X509Certificates;
-using System.Threading;
-using System.Threading.Tasks;
+﻿using System.Data;
 
 namespace AdventOfCode2022.Days
 {
@@ -21,7 +8,7 @@ namespace AdventOfCode2022.Days
         int minSteps = 1000000000;
         public long Solve()
         {
-            var input = System.IO.File.ReadAllText(@"..\..\..\Input\Day12.txt");
+            var input = File.ReadAllText(@"..\..\..\Input\Day12.txt");
 
             return RoundC(input);
         }

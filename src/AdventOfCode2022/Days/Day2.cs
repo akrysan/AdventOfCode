@@ -1,12 +1,10 @@
-﻿using System.Linq;
-
-namespace AdventOfCode2022.Days
+﻿namespace AdventOfCode2022.Days
 {
     class Day2
     {
         public int Solve()
         {
-            var input = System.IO.File.ReadAllText(@"..\..\..\Input\Day2.txt");
+            var input = File.ReadAllText(@"..\..\..\Input\Day2.txt");
 
             return RoundB(input);
         }

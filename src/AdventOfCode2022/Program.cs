@@ -1,5 +1,4 @@
-﻿using System;
-using AdventOfCode2022.Days;
+﻿using AdventOfCode2022.Days;
 
 namespace AdventOfCode2022
 {

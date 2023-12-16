@@ -1,17 +1,10 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-
-namespace AdventOfCode2022.Days
+﻿namespace AdventOfCode2022.Days
 {
     class Day7
     {
         public int Solve()
         {
-            var input = System.IO.File.ReadAllText(@"..\..\..\Input\Day7.txt");
+            var input = File.ReadAllText(@"..\..\..\Input\Day7.txt");
 
             return RoundB(input);
         }

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace AdventOfCode2022.Days
+﻿namespace AdventOfCode2022.Days
 {
     class Day24
     {
@@ -12,7 +7,7 @@ namespace AdventOfCode2022.Days
 
         public long Solve()
         {
-            var input = System.IO.File.ReadAllText(@"..\..\..\Input\Day24.txt");
+            var input = File.ReadAllText(@"..\..\..\Input\Day24.txt");
 
             return RoundB(input);
         }

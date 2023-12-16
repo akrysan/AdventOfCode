@@ -1,21 +1,10 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Net.WebSockets;
-using System.Reflection.Metadata.Ecma335;
-using System.Reflection.PortableExecutable;
-using System.Text.RegularExpressions;
-using System.Xml.Linq;
-
-namespace AdventOfCode2022.Days
+﻿namespace AdventOfCode2022.Days
 {
     class Day22
     {
         public long Solve()
         {
-            var input = System.IO.File.ReadAllText(@"..\..\..\Input\Day22.txt");
+            var input = File.ReadAllText(@"..\..\..\Input\Day22.txt");
 
             return RoundA(input);
         }
