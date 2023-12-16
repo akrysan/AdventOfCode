@@ -6,13 +6,13 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using System.Xml.Linq;
 
-namespace AdventOfCode
+namespace AdventOfCode2022.Days
 {
     class Day19
     {
         public long Solve()
         {
-            var input = System.IO.File.ReadAllText(@"..\..\..\input\day19.txt");
+            var input = System.IO.File.ReadAllText(@"..\..\..\Input\Day19.txt");
 
             return RoundB(input);
         }

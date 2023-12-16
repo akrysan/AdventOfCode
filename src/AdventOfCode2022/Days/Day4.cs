@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace AdventOfCode
+namespace AdventOfCode2022.Days
 {
     class Day4
     {
         public int Solve()
         {
-            var input = System.IO.File.ReadAllText(@"..\..\..\input\day4.txt");
+            var input = System.IO.File.ReadAllText(@"..\..\..\Input\Day4.txt");
 
             return RoundB(input);
         }
@@ -35,7 +35,7 @@ namespace AdventOfCode
             return result;
         }
 
-        private int[] Parse(string  x) {
+        private int[] Parse(string x) {
             var result = x.Split(",")
             .SelectMany(y => y.Split("-"))
             .Select(y => int.Parse(y));

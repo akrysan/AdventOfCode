@@ -6,13 +6,13 @@ using System.Linq;
 using System.Numerics;
 using System.Security.Cryptography.X509Certificates;
 
-namespace AdventOfCode
+namespace AdventOfCode2022.Days
 {
     class Day11
     {
         public long Solve()
         {
-            var input = System.IO.File.ReadAllText(@"..\..\..\input\day11.txt");
+            var input = System.IO.File.ReadAllText(@"..\..\..\Input\Day11.txt");
 
             return RoundB(input);
         }

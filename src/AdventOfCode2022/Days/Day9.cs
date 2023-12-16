@@ -5,13 +5,13 @@ using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Net.Http;
 
-namespace AdventOfCode
+namespace AdventOfCode2022.Days
 {
     class Day9
     {
         public int Solve()
         {
-            var input = System.IO.File.ReadAllText(@"..\..\..\input\day9.txt");
+            var input = System.IO.File.ReadAllText(@"..\..\..\Input\Day9.txt");
 
             return RoundB(input);
         }
@@ -44,10 +44,8 @@ namespace AdventOfCode
                         headPosition = (headPosition.Item1 - 1, headPosition.Item2);
                     }
 
-                    tailPosition = MoveTail(headPosition, tailPosition);
-
-                    map.Add(tailPosition);
-                } 
+                    map.AddRange(MoveTail(moves, headPosition, tailPosition));
+                }
             }
 
             return map.Distinct().Count();
@@ -59,10 +57,10 @@ namespace AdventOfCode
 
 
 
-            return map.Distinct().Count();
+            return 0;
         }
 
-        private List<(int, int)> Move((int, int) head, (int, int) tail)
+        private List<(int, int)> MoveTail(string[] moves, (int, int) head, (int, int) tail)
         {
             var map = new List<(int, int)>(); //HashSet<(int, int)>();
             var rope = new (int, int)[10];

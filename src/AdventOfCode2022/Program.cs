@@ -1,6 +1,7 @@
 ﻿using System;
+using AdventOfCode2022.Days;
 
-namespace AdventOfCode
+namespace AdventOfCode2022
 {
     class Program
     {

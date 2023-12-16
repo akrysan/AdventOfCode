@@ -8,13 +8,13 @@ using System.IO.MemoryMappedFiles;
 using System.Linq;
 using System.Numerics;
 
-namespace AdventOfCode
+namespace AdventOfCode2022.Days
 {
     class Day15
     {
         public long Solve()
         {
-            var input = System.IO.File.ReadAllText(@"..\..\..\input\day15.txt");
+            var input = System.IO.File.ReadAllText(@"..\..\..\Input\Day15.txt");
 
             return RoundB(input);
         }

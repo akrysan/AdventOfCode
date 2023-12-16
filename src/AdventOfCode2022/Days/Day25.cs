@@ -3,13 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace AdventOfCode
+namespace AdventOfCode2022.Days
 {
     class Day25
     {
         public string Solve()
         {
-            var input = System.IO.File.ReadAllText(@"..\..\..\input\day25.txt");
+            var input = System.IO.File.ReadAllText(@"..\..\..\Input\Day25.txt");
 
             return RoundA(input);
         }

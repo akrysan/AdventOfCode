@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace AdventOfCode
+namespace AdventOfCode2022.Days
 {
     class Day6
     {
         public int Solve()
         {
-            var input = System.IO.File.ReadAllText(@"..\..\..\input\day6.txt");
+            var input = System.IO.File.ReadAllText(@"..\..\..\Input\Day6.txt");
 
             return RoundA(input);
         }

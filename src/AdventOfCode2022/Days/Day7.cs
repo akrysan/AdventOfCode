@@ -4,15 +4,14 @@ using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
-using static AdventOfCode.Day7;
 
-namespace AdventOfCode
+namespace AdventOfCode2022.Days
 {
     class Day7
     {
         public int Solve()
         {
-            var input = System.IO.File.ReadAllText(@"..\..\..\input\day7.txt");
+            var input = System.IO.File.ReadAllText(@"..\..\..\Input\Day7.txt");
 
             return RoundB(input);
         }
@@ -132,7 +131,7 @@ namespace AdventOfCode
         }
 
         public class Item
-            {
+        {
             private List<Item> _children = new List<Item>();
             public int Size { get; set; }
             public int Type { get; set; }

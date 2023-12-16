@@ -9,13 +9,13 @@ using System.Reflection.PortableExecutable;
 using System.Text.RegularExpressions;
 using System.Xml.Linq;
 
-namespace AdventOfCode
+namespace AdventOfCode2022.Days
 {
     class Day22
     {
         public long Solve()
         {
-            var input = System.IO.File.ReadAllText(@"..\..\..\input\day22.txt");
+            var input = System.IO.File.ReadAllText(@"..\..\..\Input\Day22.txt");
 
             return RoundA(input);
         }
