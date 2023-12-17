@@ -1,2 +1,12 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using AdventOfCode2023.Days;
+
+namespace AdventOfCode2023
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine(new Day17().Solve());
+        }
+    }
+}
